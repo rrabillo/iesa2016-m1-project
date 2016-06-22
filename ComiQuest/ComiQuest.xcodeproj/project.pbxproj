@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C18227C1D1AD0A600B38BA4 /* Intervenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C18227B1D1AD0A600B38BA4 /* Intervenant.swift */; };
 		1C18227E1D1AD44C00B38BA4 /* IntervenantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C18227D1D1AD44C00B38BA4 /* IntervenantList.swift */; };
+		1C1822801D1AD96400B38BA4 /* Horraire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C18227F1D1AD96400B38BA4 /* Horraire.swift */; };
 		1CAF4A5C1D1AC7610027248E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF4A5B1D1AC7610027248E /* AppDelegate.swift */; };
 		1CAF4A5E1D1AC7610027248E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF4A5D1D1AC7610027248E /* MasterViewController.swift */; };
 		1CAF4A601D1AC7610027248E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF4A5F1D1AC7610027248E /* DetailViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		1C18227B1D1AD0A600B38BA4 /* Intervenant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intervenant.swift; sourceTree = "<group>"; };
 		1C18227D1D1AD44C00B38BA4 /* IntervenantList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervenantList.swift; sourceTree = "<group>"; };
+		1C18227F1D1AD96400B38BA4 /* Horraire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Horraire.swift; sourceTree = "<group>"; };
 		1CAF4A581D1AC7610027248E /* ComiQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComiQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CAF4A5B1D1AC7610027248E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CAF4A5D1D1AC7610027248E /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				1C18227B1D1AD0A600B38BA4 /* Intervenant.swift */,
 				1C18227D1D1AD44C00B38BA4 /* IntervenantList.swift */,
+				1C18227F1D1AD96400B38BA4 /* Horraire.swift */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CAF4A601D1AC7610027248E /* DetailViewController.swift in Sources */,
+				1C1822801D1AD96400B38BA4 /* Horraire.swift in Sources */,
 				1CAF4A5E1D1AC7610027248E /* MasterViewController.swift in Sources */,
 				1C18227C1D1AD0A600B38BA4 /* Intervenant.swift in Sources */,
 				1CAF4A5C1D1AC7610027248E /* AppDelegate.swift in Sources */,
