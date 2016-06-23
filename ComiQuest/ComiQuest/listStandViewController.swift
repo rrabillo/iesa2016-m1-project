@@ -51,11 +51,12 @@ class listStandViewController: UITableViewController {
     
     func insertNewObject(sender: AnyObject) {
         
-        let alert = UIAlertController(title: "Inserer Stand", message: "get the stand", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Inserer Stand", message: "Veuillez saisir les informations requises", preferredStyle: UIAlertControllerStyle.Alert)
         let saveAction = UIAlertAction(title: "Save", style: .Default){
             (action: UIAlertAction) -> Void in
-            let textField = alert.textFields![0]
-            let stand = Stand(name:textField.text!)
+            let nameField = alert.textFields![0] as UITextField
+            let nameField2 = alert.textFields![1] as UITextField
+            let stand = Stand(name:nameField.text!, theme: nameField2.text!)
             self.standContainer.standCollection.append(stand)
             self.standContainer.insertItems()
             self.standContainer.retrieveItems()
@@ -67,6 +68,11 @@ class listStandViewController: UITableViewController {
         }
         alert.addTextFieldWithConfigurationHandler{
             (textField: UITextField) -> Void in
+            textField.placeholder = "Nom du stand"
+        }
+        alert.addTextFieldWithConfigurationHandler{
+            (textField: UITextField) -> Void in
+            textField.placeholder = "Theme du stand"
         }
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
@@ -112,6 +118,7 @@ class listStandViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             //standContainer.standCollection.removeAtIndex(indexPath.row)
+            self.standContainer.removeItem(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.

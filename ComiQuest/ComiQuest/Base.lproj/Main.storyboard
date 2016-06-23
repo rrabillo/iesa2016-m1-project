@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUe-XT-dMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528" y="143"/>
+            <point key="canvasLocation" x="1521" y="143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
@@ -252,6 +252,6 @@
         <image name="plan_salon" width="523" height="1526"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Se-Cj-Pb8"/>
+        <segue reference="GKi-kA-LjT"/>
     </inferredMetricsTieBreakers>
 </document>
