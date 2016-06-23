@@ -10,7 +10,7 @@ import Foundation
 
 class Intervenant {    
     
-    var name : String?  {
+    var name : String {
         get {
             return self.name
         }
