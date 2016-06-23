@@ -9,7 +9,23 @@
 import Foundation
 
 class Horraire {
-    var startDate : NSDate?
-    var endDate : NSDate?
+    
+    var startDate : NSDate? {
+        get {
+            return self.startDate
+        }
+        set(startDateValue) {
+            self.startDate = startDateValue
+        }
+    }
+    
+    var endDate : NSDate? {
+        get {
+            return self.endDate
+        }
+        set(endDateValue) {
+            self.endDate = endDateValue
+        }
+    }
     
 }
