@@ -11,12 +11,20 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var imageViewPlan: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    
+    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
 
 
     var detailItem: AnyObject? {
         didSet {
             // Update the view.
-            self.configureView()
+            self.configureView()            
         }
     }
 
@@ -31,7 +39,9 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the    x@view, typically from a nib.
+        self.imageViewPlan.image = UIImage (named: "plan_salon")
+        //imageViewPlan!.frame = CGRectMake(0,0,100,200)
         self.configureView()
     }
 
@@ -39,7 +49,32 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    private func updateMinZoomScaleForSize(size: CGSize) {
+        let widthScale = size.width / imageViewPlan.bounds.width
+        let heightScale = size.height / imageViewPlan.bounds.height
+        let minScale = min(widthScale, heightScale)
+        
+        scrollView.minimumZoomScale = minScale
+        
+        scrollView.zoomScale = minScale
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        updateMinZoomScaleForSize(view.bounds.size)
+    }
+   
 }
+
+extension DetailViewController: UIScrollViewDelegate {
+    func viewForZoomingInScrollView(s   crollView: UIScrollView) -> UIView? {
+        return imageViewPlan
+    }
+}
+
+
+
+
 
