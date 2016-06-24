@@ -82,11 +82,13 @@ class listStandViewController: UITableViewController {
     // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print(segue.identifier)
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                //                let selectedStand:Stand = standContainer.standCollection[indexPath.row]
+                let selectedStand:Stand = standContainer.standCollection[indexPath.row]
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                // controller.detailItem = selectedStand
+                print(selectedStand.theme)
+                controller.detailItem = selectedStand
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
