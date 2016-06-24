@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0593B81D1D613400DAFB2A /* DetailStandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0593B71D1D613400DAFB2A /* DetailStandViewController.swift */; };
 		1C18227C1D1AD0A600B38BA4 /* Intervenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C18227B1D1AD0A600B38BA4 /* Intervenant.swift */; };
 		1C18227E1D1AD44C00B38BA4 /* IntervenantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C18227D1D1AD44C00B38BA4 /* IntervenantList.swift */; };
 		1C1822801D1AD96400B38BA4 /* Horraire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C18227F1D1AD96400B38BA4 /* Horraire.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C0593B71D1D613400DAFB2A /* DetailStandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailStandViewController.swift; sourceTree = "<group>"; };
 		1C18227B1D1AD0A600B38BA4 /* Intervenant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intervenant.swift; sourceTree = "<group>"; };
 		1C18227D1D1AD44C00B38BA4 /* IntervenantList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervenantList.swift; sourceTree = "<group>"; };
 		1C18227F1D1AD96400B38BA4 /* Horraire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Horraire.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				1C18227A1D1AD08700B38BA4 /* Class */,
 				1CAF4A5B1D1AC7610027248E /* AppDelegate.swift */,
 				1CAF4A5D1D1AC7610027248E /* MasterViewController.swift */,
+				1C0593B71D1D613400DAFB2A /* DetailStandViewController.swift */,
 				1CA573B51D1C1494000F9E9E /* ListIntervenantViewController.swift */,
 				1C61F96E1D1C45AC0024826D /* listStandViewController.swift */,
 				1CAF4A5F1D1AC7610027248E /* DetailViewController.swift */,
@@ -308,6 +311,8 @@
 				1C18227C1D1AD0A600B38BA4 /* Intervenant.swift in Sources */,
 				1C61F96F1D1C45AC0024826D /* listStandViewController.swift in Sources */,
 				1CD601CA1D1D185A00E2B661 /* Author.swift in Sources */,
+				1C0593B81D1D613400DAFB2A /* DetailStandViewController.swift in Sources */,
+
 				1CAF4A5C1D1AC7610027248E /* AppDelegate.swift in Sources */,
 				1C18227E1D1AD44C00B38BA4 /* IntervenantList.swift in Sources */,
 				1CFB53FB1D1C4A750042F1E8 /* Stand.swift in Sources */,
