@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Stand:NSObject {
+class Stand: NSObject {
     var name: String
     var theme: String
     init(name: String, theme: String){
@@ -25,4 +25,6 @@ class Stand:NSObject {
         coder.encodeObject(self.name, forKey: "name")
         coder.encodeObject(self.theme, forKey: "theme")
     }
+   
+    
 }
