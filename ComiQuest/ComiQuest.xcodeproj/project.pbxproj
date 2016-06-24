@@ -23,6 +23,9 @@
 		1CD601C61D1D159C00E2B661 /* AuthorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD601C51D1D159C00E2B661 /* AuthorTest.swift */; };
 		1CD601CA1D1D185A00E2B661 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD601C91D1D185A00E2B661 /* Author.swift */; };
 		1CD601CB1D1D185A00E2B661 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD601C91D1D185A00E2B661 /* Author.swift */; };
+		1CD601CC1D1D42AE00E2B661 /* IntervenantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C18227D1D1AD44C00B38BA4 /* IntervenantList.swift */; };
+		1CD601D01D1D42E000E2B661 /* IntervenantListTEst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD601CF1D1D42E000E2B661 /* IntervenantListTEst.swift */; };
+		1CD601D11D1D437D00E2B661 /* Intervenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C18227B1D1AD0A600B38BA4 /* Intervenant.swift */; };
 		1CFB53FB1D1C4A750042F1E8 /* Stand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB53FA1D1C4A750042F1E8 /* Stand.swift */; };
 		1CFB53FD1D1C4A8A0042F1E8 /* StandList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB53FC1D1C4A8A0042F1E8 /* StandList.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +69,7 @@
 		1CAF4A7F1D1AC7610027248E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CD601C51D1D159C00E2B661 /* AuthorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorTest.swift; sourceTree = "<group>"; };
 		1CD601C91D1D185A00E2B661 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		1CD601CF1D1D42E000E2B661 /* IntervenantListTEst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervenantListTEst.swift; sourceTree = "<group>"; };
 		1CFB53FA1D1C4A750042F1E8 /* Stand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stand.swift; sourceTree = "<group>"; };
 		1CFB53FC1D1C4A8A0042F1E8 /* StandList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +155,7 @@
 				1CAF4A721D1AC7610027248E /* ComiQuestTests.swift */,
 				1CAF4A741D1AC7610027248E /* Info.plist */,
 				1CD601C51D1D159C00E2B661 /* AuthorTest.swift */,
+				1CD601CF1D1D42E000E2B661 /* IntervenantListTEst.swift */,
 			);
 			path = ComiQuestTests;
 			sourceTree = "<group>";
@@ -315,7 +320,10 @@
 			files = (
 				1CD601CB1D1D185A00E2B661 /* Author.swift in Sources */,
 				1CD601C61D1D159C00E2B661 /* AuthorTest.swift in Sources */,
+				1CD601CC1D1D42AE00E2B661 /* IntervenantList.swift in Sources */,
 				1CAF4A731D1AC7610027248E /* ComiQuestTests.swift in Sources */,
+				1CD601D11D1D437D00E2B661 /* Intervenant.swift in Sources */,
+				1CD601D01D1D42E000E2B661 /* IntervenantListTEst.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
