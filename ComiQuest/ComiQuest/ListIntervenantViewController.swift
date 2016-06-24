@@ -37,19 +37,13 @@ class ListIntervenantViewController: UITableViewController {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
-        
-        /*func insertNewObject(sender: AnyObject) {
-            myIntervenant.books.insert(myIntervenant.books[0], atIndex: 0)
-            let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-            self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-        }*/
-        
+
         // MARK: - Segues
         
         override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             if segue.identifier == "showDetail" {
                 if let indexPath = self.tableView.indexPathForSelectedRow {
-                    let selectedIntervant:Intervenant = myIntervenant.intervenantCollection[indexPath.row]
+                    let selectedIntervant:Intervenant = self.myIntervenant.intervenantCollection[indexPath.row]
                     let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                     controller.detailItem = selectedIntervant
                     controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
@@ -65,12 +59,12 @@ class ListIntervenantViewController: UITableViewController {
         }
         
         override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return myIntervenant.intervenantCollection.count
+            return self.myIntervenant.intervenantCollection.count
         }
         
         override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-            cell.textLabel!.text = myIntervenant.intervenantCollection[indexPath.row].name
+            let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+            cell.textLabel!.text = self.myIntervenant.intervenantCollection[indexPath.row].name
             return cell
         }
         
@@ -81,7 +75,7 @@ class ListIntervenantViewController: UITableViewController {
         
         override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
             if editingStyle == .Delete {
-                myIntervenant.intervenantCollection.removeAtIndex(indexPath.row)
+                self.myIntervenant.intervenantCollection.removeAtIndex(indexPath.row)
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             } else if editingStyle == .Insert {
                 // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
