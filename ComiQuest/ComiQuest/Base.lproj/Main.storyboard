@@ -54,7 +54,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Plan" id="rjv-ia-dFh"/>
                     <connections>
                         <outlet property="imageViewPlan" destination="QN3-ax-eCr" id="qo3-Hd-Nsn"/>
                         <outlet property="imageViewTrailingConstraint" destination="oVS-gu-OrX" id="2Wu-md-UZb"/>
@@ -92,28 +92,28 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4b-xJ-cmd">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="228"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
                                     <state key="normal" title="Plan "/>
                                     <connections>
                                         <segue destination="JEX-9P-axG" kind="show" id="5Se-Cj-Pb8"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvu-js-9Z0">
-                                    <rect key="frame" x="0.0" y="228" width="600" height="30"/>
+                                    <rect key="frame" x="0.0" y="30" width="600" height="30"/>
                                     <state key="normal" title="Liste des stands"/>
                                     <connections>
                                         <segue destination="26A-lg-5vu" kind="show" id="547-LO-Cfn"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdH-mV-08Q">
-                                    <rect key="frame" x="0.0" y="258" width="600" height="30"/>
+                                    <rect key="frame" x="0.0" y="60" width="600" height="30"/>
                                     <state key="normal" title="Liste des intervenants"/>
                                     <connections>
                                         <segue destination="UWB-2y-XGn" kind="show" id="qiL-1j-4go"/>
                                     </connections>
                                 </button>
                                 <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfE-qs-wTz">
-                                    <rect key="frame" x="0.0" y="288" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="90" width="600" height="242"/>
                                     <items>
                                         <navigationItem id="Wdu-mN-MSq"/>
                                     </items>
@@ -150,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
         </scene>
-        <!--List Intervenant View Controller-->
+        <!--Title-->
         <scene sceneID="4uq-LT-Z8e">
             <objects>
                 <tableViewController id="UWB-2y-XGn" customClass="ListIntervenantViewController" customModule="ComiQuest" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,12 +173,13 @@
                             <outlet property="delegate" destination="UWB-2y-XGn" id="H5c-Wz-zox"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="JvT-V8-d53"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aB8-bo-HWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521" y="-1311"/>
+            <point key="canvasLocation" x="1467" y="-1323"/>
         </scene>
-        <!--List Stand View Controller-->
+        <!--Title-->
         <scene sceneID="6wj-zH-hwv">
             <objects>
                 <tableViewController id="26A-lg-5vu" customClass="listStandViewController" customModule="ComiQuest" customModuleProvider="target" sceneMemberID="viewController">
@@ -194,6 +195,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="LId-po-Vb0" kind="showDetail" identifier="ShowStandDetail" id="5I1-TS-XXf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -201,25 +205,39 @@
                             <outlet property="delegate" destination="26A-lg-5vu" id="kdY-ue-knm"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="pjv-vO-boi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXm-Fc-fkk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1508" y="-558"/>
+            <point key="canvasLocation" x="1511" y="-558"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xK2-Nd-bJb">
+        <!--Detail Stand View Controller-->
+        <scene sceneID="Hif-OJ-xRQ">
             <objects>
-                <viewController id="7KX-wp-nWH" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vk-Qs-567" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="LId-po-Vb0" customClass="DetailStandViewController" customModule="ComiQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="r2g-CI-kZE"/>
-                        <viewControllerLayoutGuide type="bottom" id="fku-IF-cM6"/>
+                        <viewControllerLayoutGuide type="top" id="syO-ir-UqM"/>
+                        <viewControllerLayoutGuide type="bottom" id="3DT-aT-mPw"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zGB-wH-3kx">
+                    <view key="view" contentMode="scaleToFill" id="CCO-P4-KvE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnm-Zh-Nbl">
-                                <rect key="frame" x="336" y="245" width="33" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom du stand :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQF-dU-LEl">
+                                <rect key="frame" x="11" y="80" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thème :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcJ-JI-B6P">
+                                <rect key="frame" x="11" y="122" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0z-zj-8JW">
+                                <rect key="frame" x="167" y="80" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -227,10 +245,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="standName" destination="a0z-zj-8JW" id="be9-d7-ce9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KUe-XT-dMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521" y="143"/>
+            <point key="canvasLocation" x="2223" y="-558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
