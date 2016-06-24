@@ -92,28 +92,28 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4b-xJ-cmd">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="228"/>
                                     <state key="normal" title="Plan "/>
                                     <connections>
                                         <segue destination="JEX-9P-axG" kind="show" id="5Se-Cj-Pb8"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvu-js-9Z0">
-                                    <rect key="frame" x="0.0" y="30" width="600" height="30"/>
+                                    <rect key="frame" x="0.0" y="228" width="600" height="30"/>
                                     <state key="normal" title="Liste des stands"/>
                                     <connections>
                                         <segue destination="26A-lg-5vu" kind="show" id="547-LO-Cfn"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdH-mV-08Q">
-                                    <rect key="frame" x="0.0" y="60" width="600" height="30"/>
+                                    <rect key="frame" x="0.0" y="258" width="600" height="30"/>
                                     <state key="normal" title="Liste des intervenants"/>
                                     <connections>
                                         <segue destination="UWB-2y-XGn" kind="show" id="qiL-1j-4go"/>
                                     </connections>
                                 </button>
                                 <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfE-qs-wTz">
-                                    <rect key="frame" x="0.0" y="90" width="600" height="242"/>
+                                    <rect key="frame" x="0.0" y="288" width="600" height="44"/>
                                     <items>
                                         <navigationItem id="Wdu-mN-MSq"/>
                                     </items>
