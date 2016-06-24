@@ -22,5 +22,9 @@ class IntervenantList {
         intervenantCollection.append(intervenant2)
         
     }
+    func addIntervenant(value: Intervenant){
+        self.intervenantCollection.append(value)
+    }
+    
     
 }
