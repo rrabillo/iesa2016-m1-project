@@ -16,7 +16,7 @@ class Intervenant {
     var photo: String
     var sexe: String
     var country: String
-  
+    
     init(nameValue: String, firstNameValue: String, countryValue: String, ageValue: Int , photoValue: String, sexeValue: String){
         self.name = nameValue
         self.firstName = firstNameValue
