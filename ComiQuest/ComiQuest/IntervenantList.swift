@@ -30,7 +30,7 @@ class IntervenantList {
             firstNameValue: "test",
             countryValue: "test",
             ageValue: 10,
-            photoValue: "url-photo.png",
+            photoValue: "url-photo.png ",
             sexeValue: "test"
         )
         self.addIntervenant(intervenantTest)
