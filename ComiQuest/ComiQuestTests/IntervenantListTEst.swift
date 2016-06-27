@@ -33,11 +33,16 @@ class IntervenantListTest: XCTestCase {
     }
     func test_add_to_list(){
         let intervenantStore = IntervenantList()
-        XCTAssert(intervenantStore.isIntervenantAdded())
+        let intervenant = Intervenant(nameValue: "test", firstNameValue: "test", countryValue: "test", ageValue: 33 , photoValue: "test", sexeValue: "homme")
+        intervenantStore.addIntervenant(intervenant)
+        XCTAssertEqual(1, intervenantStore.intervenantCollection.count)
     }
     func test_remove_from_list(){
         let intervenantStore = IntervenantList()
-        XCTAssert(intervenantStore.isIntervenantRemoved())
+        let intervenant = Intervenant(nameValue: "test", firstNameValue: "test", countryValue: "test", ageValue: 33 , photoValue: "test", sexeValue: "homme")
+        intervenantStore.addIntervenant(intervenant)
+        intervenantStore.removeIntervenant(intervenant)
+        XCTAssertEqual(0, intervenantStore.intervenantCollection.count)
     }
 
 }
