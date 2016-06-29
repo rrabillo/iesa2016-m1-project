@@ -17,21 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="comiquest" translatesAutoresizingMaskIntoConstraints="NO" id="hG3-J3-rAt">
-                                <rect key="frame" x="50" y="56" width="501" height="501"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="comiquest" translatesAutoresizingMaskIntoConstraints="NO" id="ONx-ma-olj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1136" id="PaH-BR-PA1"/>
-                                    <constraint firstAttribute="width" constant="640" id="lIA-6c-hDd"/>
+                                    <constraint firstAttribute="width" constant="640" id="mTV-DD-uSX"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hG3-J3-rAt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="K1f-8K-m2q"/>
-                            <constraint firstAttribute="trailing" secondItem="hG3-J3-rAt" secondAttribute="trailing" id="Xkk-Gw-RIM"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="hG3-J3-rAt" secondAttribute="bottom" id="hOx-mt-zaQ"/>
-                            <constraint firstItem="hG3-J3-rAt" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="jo4-lI-8zN"/>
-                            <constraint firstAttribute="trailing" secondItem="hG3-J3-rAt" secondAttribute="trailing" id="l1f-gQ-jbZ"/>
+                            <constraint firstItem="ONx-ma-olj" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="AUo-xh-nvb"/>
+                            <constraint firstAttribute="trailing" secondItem="ONx-ma-olj" secondAttribute="trailing" id="YXC-oj-9O7"/>
                         </constraints>
                     </view>
                 </viewController>

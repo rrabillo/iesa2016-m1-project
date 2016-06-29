@@ -32,33 +32,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O4b-gX-dTi">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZ7-uv-pE8">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
-                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="plan_salon" translatesAutoresizingMaskIntoConstraints="NO" id="QN3-ax-eCr">
-                                        <rect key="frame" x="170" y="18" width="274" height="499"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="plan_salon" translatesAutoresizingMaskIntoConstraints="NO" id="nAK-No-rFe">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="536" id="0Nk-L5-YAc"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="QN3-ax-eCr" firstAttribute="leading" secondItem="O4b-gX-dTi" secondAttribute="leading" id="DE0-dC-fkL"/>
-                                    <constraint firstAttribute="bottom" secondItem="QN3-ax-eCr" secondAttribute="bottom" id="RXw-uF-IKF"/>
-                                    <constraint firstItem="QN3-ax-eCr" firstAttribute="top" secondItem="O4b-gX-dTi" secondAttribute="top" id="TPz-H0-za1"/>
-                                    <constraint firstAttribute="trailing" secondItem="QN3-ax-eCr" secondAttribute="trailing" id="oVS-gu-OrX"/>
+                                    <constraint firstItem="nAK-No-rFe" firstAttribute="top" secondItem="zZ7-uv-pE8" secondAttribute="top" constant="64" id="0i8-KW-UmC"/>
+                                    <constraint firstItem="nAK-No-rFe" firstAttribute="centerX" secondItem="zZ7-uv-pE8" secondAttribute="centerX" id="OQm-P0-jAx"/>
+                                    <constraint firstAttribute="bottom" secondItem="nAK-No-rFe" secondAttribute="bottom" constant="-64" id="dJm-Kp-FyJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="nAK-No-rFe" secondAttribute="trailing" id="f3D-Vs-tCL"/>
+                                    <constraint firstItem="nAK-No-rFe" firstAttribute="leading" secondItem="zZ7-uv-pE8" secondAttribute="leading" id="p88-g9-NSd"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="JEX-9P-axG" id="hBc-pI-9sg"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="O4b-gX-dTi" secondAttribute="trailing" id="UCa-oE-ZK4"/>
-                            <constraint firstItem="O4b-gX-dTi" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="fcD-3L-bVm"/>
+                            <constraint firstAttribute="trailing" secondItem="zZ7-uv-pE8" secondAttribute="trailing" id="df1-ya-6BZ"/>
+                            <constraint firstItem="zZ7-uv-pE8" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="oIV-nF-M0a"/>
+                            <constraint firstItem="zZ7-uv-pE8" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="sad-w7-35L"/>
+                            <constraint firstItem="zZ7-uv-pE8" firstAttribute="bottom" secondItem="GAO-Cl-Wes" secondAttribute="top" id="vbX-a4-6Q8"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Plan" id="rjv-ia-dFh"/>
                     <connections>
-                        <outlet property="imageViewPlan" destination="QN3-ax-eCr" id="qo3-Hd-Nsn"/>
-                        <outlet property="imageViewTrailingConstraint" destination="oVS-gu-OrX" id="2Wu-md-UZb"/>
-                        <outlet property="scrollView" destination="O4b-gX-dTi" id="IXh-xe-4rr"/>
+                        <outlet property="imageViewPlan" destination="nAK-No-rFe" id="JGV-y9-bdg"/>
+                        <outlet property="scrollView" destination="zZ7-uv-pE8" id="BYb-tv-gGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
@@ -91,29 +99,29 @@
                             <rect key="frame" x="0.0" y="136" width="600" height="332"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4b-xJ-cmd">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4b-xJ-cmd">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="228"/>
                                     <state key="normal" title="Plan "/>
                                     <connections>
                                         <segue destination="JEX-9P-axG" kind="show" id="5Se-Cj-Pb8"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvu-js-9Z0">
-                                    <rect key="frame" x="0.0" y="30" width="600" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvu-js-9Z0">
+                                    <rect key="frame" x="0.0" y="228" width="600" height="30"/>
                                     <state key="normal" title="Liste des stands"/>
                                     <connections>
                                         <segue destination="26A-lg-5vu" kind="show" id="547-LO-Cfn"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdH-mV-08Q">
-                                    <rect key="frame" x="0.0" y="60" width="600" height="30"/>
+                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdH-mV-08Q">
+                                    <rect key="frame" x="0.0" y="258" width="600" height="30"/>
                                     <state key="normal" title="Liste des intervenants"/>
                                     <connections>
                                         <segue destination="UWB-2y-XGn" kind="show" id="qiL-1j-4go"/>
                                     </connections>
                                 </button>
-                                <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfE-qs-wTz">
-                                    <rect key="frame" x="0.0" y="90" width="600" height="242"/>
+                                <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfE-qs-wTz">
+                                    <rect key="frame" x="0.0" y="288" width="600" height="44"/>
                                     <items>
                                         <navigationItem id="Wdu-mN-MSq"/>
                                     </items>
