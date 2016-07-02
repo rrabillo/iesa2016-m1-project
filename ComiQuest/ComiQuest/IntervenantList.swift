@@ -7,20 +7,38 @@
 //
 
 import Foundation
-class IntervenantList {
+class IntervenantList: NSObject {
     
     var intervenantCollection :[Intervenant] = []
+    let stocker = NSUserDefaults.standardUserDefaults()
+
     
-    init(){
-       
-//        
-//        let intervenant1 = Intervenant(nameValue: "Cranston", firstNameValue: "Bryan", countryValue: "USA", ageValue: 60, photoValue: "url-photo.png", sexeValue: "Homme")
-//        let intervenant2 = Intervenant(nameValue: "Paul", firstNameValue: "Aaron", countryValue: "USA", ageValue: 36, photoValue: "url-photo.png", sexeValue: "Homme")
-//        
-//        intervenantCollection.append(intervenant1)
-//        intervenantCollection.append(intervenant2)
-        
+    required init(coder aDecoder: NSCoder) {
     }
+    func encodeWithCoder(aCoder: NSCoder){
+        aCoder.encodeObject(intervenantCollection, forKey: "IntervenantList")
+    }
+    func insertItems()
+    {
+        let stockerIntervenant = NSKeyedArchiver.archivedDataWithRootObject(self.intervenantCollection)
+        NSUserDefaults.standardUserDefaults().setObject(stockerIntervenant, forKey: "IntervenantList")
+    }
+    
+    func retrieveItems()
+    {
+        if let stockerIntervenant = NSUserDefaults.standardUserDefaults().objectForKey("IntervenantList") as? NSData {
+            let savedIntervenantList = NSKeyedUnarchiver.unarchiveObjectWithData(stockerIntervenant) as! [Intervenant]
+            self.intervenantCollection = savedIntervenantList
+        }
+    }
+    func removeItem(value: Int){
+        self.intervenantCollection.removeAtIndex(value)
+        let stockerIntervenant = NSKeyedArchiver.archivedDataWithRootObject(self.intervenantCollection)
+        NSUserDefaults.standardUserDefaults().setObject(stockerIntervenant, forKey: "IntervenantList")
+    }
+
+    //
+    
     func addIntervenant(value: Intervenant){
         self.intervenantCollection.append(value)
     }
