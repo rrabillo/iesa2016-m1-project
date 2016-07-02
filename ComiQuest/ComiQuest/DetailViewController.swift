@@ -8,17 +8,13 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-    @IBOutlet weak var imageViewPlan: UIImageView!
+
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    
-    @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+
+    @IBOutlet weak var imageViewPlan: UIImageView!
 
 
     var detailItem: AnyObject? {
@@ -39,10 +35,11 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the    x@view, typically from a nib.
-        self.imageViewPlan.image = UIImage (named: "plan_salon")
-        //imageViewPlan!.frame = CGRectMake(0,0,100,200)
-        self.configureView()
+        
+        self.scrollView.minimumZoomScale = 1.0
+        
+        self.scrollView.maximumZoomScale = 6.0
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,29 +47,15 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func updateMinZoomScaleForSize(size: CGSize) {
-        let widthScale = size.width / imageViewPlan.bounds.width
-        let heightScale = size.height / imageViewPlan.bounds.height
-        let minScale = min(widthScale, heightScale)
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         
-        scrollView.minimumZoomScale = minScale
-        
-        scrollView.zoomScale = minScale
+        return self.imageViewPlan
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        updateMinZoomScaleForSize(view.bounds.size)
-    }
    
 }
 
-extension DetailViewController: UIScrollViewDelegate {
-    func viewForZoomingInScrollView(s   crollView: UIScrollView) -> UIView? {
-        return imageViewPlan
-    }
-}
 
 
 
